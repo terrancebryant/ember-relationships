@@ -1,3 +1,11 @@
 export default function(server) {
-  server.createList('team', 32);
+  server.createList('team', 5);
+
+  // let team = server.create('team');
+  // server.createList('player', 10, { team });
+
+  server.createList('players', 100);
+
+  // let host = server.create('host');
+  // server.createList('visitor', 10, { host });
 }

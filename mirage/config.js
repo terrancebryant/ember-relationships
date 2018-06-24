@@ -29,4 +29,10 @@ export default function() {
  this.get('/teams/:id');
  this.put('/teams/:id'); // or this.patch
  this.del('/teams/:id');
+
+  this.get('/players');
+  this.post('/players');
+  this.get('/players/:id');
+  this.put('/players/:id'); // or this.patch
+  this.del('/players/:id');
 }
