@@ -1,3 +1,14 @@
-
-
+<div class="container">
+  {{#each model.teams as |team|}}
+    {{#link-to 'team' team.id}}
+    <div class="team">
+      <h3>{{team.name}}</h3>
+      <img src={{team.avatar}} alt="">
+      <div class="players">Number of players on team {{team.players.length}}</div>
+    </div>
+    {{/link-to}}
+  {{/each}}
+</div>
+<div class="detail-container">
 {{outlet}}
+</div>

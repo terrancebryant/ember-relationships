@@ -1,0 +1,26 @@
+{{outlet}}
+
+<h1>{{model.name}}</h1>
+
+<div class="detail-content">
+  <div class="sidebar">
+    <h3>Coach - {{model.coach.firstName}} {{model.coach.lastName}}</h3>
+     <img src={{model.coach.avatar}} width="250" height="250" alt="">
+  </div>
+  <div class="content">
+    {{#each model.players as |player|}}
+      <div class="player">
+          <h4>{{player.firstName}} {{player.lastName}}</h4>
+         <img src={{player.avatar}} width="150" height="150" alt="">
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+
+<h2>Edit Team</h2>
+
+{{input type="test" value=model.name}}
+
+<button type="button" {{action "edit" model}}>Save</button>
+<button type="button" {{action "destroy" model}}>Delete</button>

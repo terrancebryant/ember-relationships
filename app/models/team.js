@@ -5,6 +5,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   city: DS.attr('string'),
   state: DS.attr('string'),
-  players: DS.hasMany('player', { async: true}),
+  avatar: DS.attr('string'),
+  players: DS.hasMany('player'),
   coach: DS.belongsTo('coach')
 });
